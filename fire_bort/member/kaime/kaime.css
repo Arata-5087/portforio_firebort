@@ -1,0 +1,586 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{
+	font-size: min(4.25vw, 34px);
+	
+}
+
+
+
+body {
+	background-color: black;
+    margin: 0;
+    font-family: -apple-system,  /* iOS/macOS用 */
+    BlinkMacSystemFont, /* macOS用 */
+    "Segoe UI",     /* Windows用 */
+    Roboto,         /* Android用 */
+    "Helvetica Neue", /* iOS/macOSの古いバージョン用 */
+    Arial,          /* 汎用のゴシック体 */
+    sans-serif;     /* サンセリフ系フォント */
+  }
+
+
+header {
+  border-bottom: min(0.1rem, 3.4px) solid #797979;
+  display: block;
+  background-color: black;
+  background-image: url("../../img/header_bg.webp");
+  background-size: cover; 
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+/* ヘッダー内のコンテンツ */
+.header_contents {
+  display: flex; /* フレックスボックスで配置を調整 */
+  align-items: center; /* 縦方向の中央揃え */
+  justify-content: space-between; /* 各要素を左右に配置 */
+  width: 100%;
+  margin: 0 auto; /* 左右中央揃え */
+}
+
+.header_contents a{
+	text-decoration: none;
+	margin: 0 11% 0 6%;
+}
+
+/* メニューボタンのスタイル */
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            cursor: pointer;
+            margin-left: 3%;
+        }
+
+        .menu-icon div {
+            width: 2rem;
+            height: 0.15rem;
+            background-color: white;
+            border-radius: 1rem;
+        }
+
+		.menu.open {
+			height: 80vh;
+		    display: block;
+			overflow: auto;
+			position: fixed;
+			z-index: 1000;
+			width: 55vw;
+		}
+
+        .menu {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.7);
+			height: auto;
+			overflow: auto;
+            padding: 3%;
+        }
+.menu .close{
+	font-size: 2.5rem;
+    position: relative;
+    cursor: pointer;
+    width: 1rem;
+	top: 0rem;
+    color: white;
+    z-index: 100;
+}
+
+.menu li{
+	display: flex;
+	align-items: center;
+	margin-bottom: 4%;
+}
+
+.menu p{
+	background-color: #7F0C10;
+	color: white;
+	font-size: 1.52rem;
+	margin-bottom: 5%;
+	padding: 2%;
+}
+
+.menu a{
+	color: white;
+	display: block;
+	font-size: 1rem;
+	text-decoration: none;
+	margin-top: 7%;
+}
+
+.menu img{
+	display: block;
+	width: 25%;
+}
+
+.menu ul{
+	list-style: none;
+	padding-left: 0;
+}
+
+/* ロゴタイプのスタイル */
+.header_logotype {
+  width: 82%; /* 幅を画面幅に比例させる */
+  margin: 0 0 0 0;
+}
+
+/* ロゴのスタイル */
+.header_logo {
+  width: 16%; /* 幅を画面幅に比例させる */
+  margin: 0 0 0 0;
+}
+
+  .container {
+	display: block;
+	position: relative;
+	outline: 0.03rem solid #797979;
+    max-width: 800px;
+    margin: 0 auto;
+	overflow: hidden;
+    padding: 0;
+    box-sizing: border-box;
+	transform: scale(calc(100vw / 800));
+	transform-origin: top center;
+  }
+
+  .container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    max-width: 800px;
+    height: 100vh;
+    background-image: url('../../img/background.webp');
+    background-size: cover;
+    background-position: center bottom;
+	background-repeat: no-repeat;
+	 z-index: 0;
+  }
+
+.member-info{
+	background-color: rgba(0, 0, 0, 0.5);
+	display: block;
+	margin: 0;
+    overflow: visible;
+	position: relative;
+    text-align: center;
+	z-index: 100;
+}
+
+.division{
+	margin-top: 15%;
+}
+
+ .black-background {
+	align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+	margin: 5% 4%;
+	overflow: visible;
+	position: relative;
+  }
+
+.plan{
+	margin-bottom: -8%;
+}
+
+
+.text-section {
+    display: block;
+	margin: 1rem;
+    overflow: visible;
+    text-align: center;
+	position: relative;
+	z-index: 100;
+  }
+
+  .large-text {
+	  color: white;
+    font-size: 1.58rem; /* Scales to 52px at 800px width */
+	 margin: 0;
+	-webkit-text-stroke-width: 0.15rem;
+	-webkit-text-stroke-color: black;
+	paint-order: stroke fill ;
+	  font-weight: 700;
+	display: block;
+    position: relative;
+  }
+
+  .medium-text {
+	color: white;
+    font-size:  min(1rem, 34px); /* Scales to 34px at 800px width */
+	line-height: 1.8;
+	margin: 0;
+	-webkit-text-stroke-width:0.13rem;
+	-webkit-text-stroke-color: black;
+	paint-order: markers stroke fill ;
+	font-weight: 700;
+    display: block;
+    position: relative;
+  }
+
+ .small-text {
+	 color: white;
+    font-size:  min(0.76rem, 26px); /* Scales to 26px at 800px width */
+	 margin: 0;
+	-webkit-text-stroke-width: 0.1rem;
+	-webkit-text-stroke-color: black;
+	paint-order: markers stroke fill ;
+	 font-weight: 700;
+  }
+
+.mini-text{
+	color: white;
+    font-size: 0.7rem;
+    margin: 0;
+    -webkit-text-stroke-width: 0.07rem;
+    -webkit-text-stroke-color: black;
+    paint-order: markers stroke fill;
+    font-weight: 600;
+}
+
+    .gradient {
+      font-size: 1rem;
+      font-weight: 900;
+	  margin: 0;
+      background: linear-gradient(to bottom, #945700, #e9a900, #f5f8b4, #e9a900, #fff87f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+.text-section a{
+	color: wheat;
+	text-decoration: underline;
+	-webkit-text-stroke-width:0;
+	-webkit-text-stroke-color:none;
+}
+
+.text-section ul{
+	list-style-type: none;
+	padding-left: 0;
+}
+
+  .image-section {
+	height: auto;
+    position: relative;
+	text-align: center;
+    display: block;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+	position: relative;
+	margin: 1.5rem auto;
+  }
+
+        .floating-menu {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+			max-width: 800px;
+			transform: translateX(-50%);
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+			z-index: 500;
+        }
+
+        .floating-menu a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .floating-menu a:hover {
+            background-color: #555;
+        }
+
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .floating-menu-icon {
+            font-size: 24px;
+        }
+
+        .menu-text {
+            font-size: 0.5rem;
+        }
+.menu-item img{
+	width: 70%
+}
+table{
+	border: 0.1rem solid #5B5B5B;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	color: white;
+}
+table tr:first-child{
+	background-color: black;
+}
+
+th{
+	border: 0.1rem solid #5B5B5B;
+	padding: 0;
+	text-align: center;
+	white-space: nowrap;
+}
+
+td{
+	border: 0.1rem solid #5B5B5B;
+	font-size: 0.8rem;
+	padding: 1% 0 1% 2%;
+	text-align: left;
+	white-space: nowrap;
+}
+
+td span{
+	font-size: 0.67rem;
+}
+
+.plan_list{
+	display: block;
+	position: relative;
+	text-align: center;
+	z-index: 50;
+}
+
+.plan_btn{
+	display: inline-block;
+	margin: 1.2rem;
+}
+
+.plan_btn a{
+	background-size: contain;
+    background-position: center;
+	background-repeat: no-repeat;
+	font-weight: bolder;
+	text-decoration: none;
+	padding: 1rem 3rem;
+}
+
+.perticipate{	
+	background-image: url("../img/participate_btn.webp");
+	color: white;
+}
+
+.perticipated{
+	background-image: url("../img/participated_btn.webp");
+	color: white;
+}
+
+.publick{
+	background-image: url("../img/public_btn.webp");
+	color: white;
+}
+
+.sold_out{
+	background-image: url("../img/sold_out_btn.webp");
+	color: #5b5b5b;
+
+}
+
+footer{
+	background-color: black;
+	width: 100%;
+	height: auto;
+	text-align: left;
+	color: white;
+	margin: 0 auto;
+	padding-bottom: 20%;
+	max-width: 800px;
+	position: relative;
+	z-index: 1;
+}
+
+footer ul{
+	padding-left: 7%;
+}
+
+footer li{
+	font-weight: normal;
+	margin-bottom: 4%;
+}
+
+.footer_nav{
+	
+	display: flex;
+	justify-content: space-around; /* 均等配列 */
+	padding: 5% 0; /* 上下の余白を追加 */
+}
+
+.footer_nav a {
+	font-size: 22px;
+	color: white;
+	text-decoration: none;
+}
+
+.copyright{
+	display: block;
+    overflow: visible;
+    text-align: center;
+	position: relative;
+	z-index: 100;
+}
+
+@media (min-width: 800px) {
+    .container::before {
+      position: fixed; /* Keep the background fixed only when width >= 800px */
+    }
+}
+
+  @media (max-width: 800px){
+	  
+	.footer_nav {
+        display: flex;
+        flex-wrap: wrap; /* アイテムを折り返し */
+        justify-content: center; /* 中央揃え */
+    }
+
+    .footer_nav a {
+		font-size: min(0.76rem, 26px);
+        width: 45%; /* 各リンクの幅を45%に設定（2列表示にするため） */
+        margin: 1% -2%; /* 上下の余白を10px、左右の余白を2% */
+        text-align: center; /* リンク内テキストの中央揃え */
+    }
+}
+
+.modal {
+	display: none; /* 初期は非表示 */
+	top: 0%;
+	position: absolute;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	pointer-events: auto;
+	background-color: rgba(0, 0, 0, 0.5); /* 背景の半透明化 */
+}
+
+/* モーダルコンテンツ */
+.modal-content {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	transform: scale(1) translate(-50%, -50%);
+	position: fixed;
+	top: 50%;
+    left: 50%;
+	width: 95%;
+	overflow: visible;
+    height: 80%;
+	max-width: 500px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content .toiawase{
+	font-size: 0.76rem;
+    text-decoration: none;
+    color: black;
+    border: 0.01rem solid black;
+    margin: 0% 20%;
+    padding: 2% 0;
+}
+
+.white-background{
+	background-color: black;
+	border-radius: 10px;
+	font-size: min(1rem, 20px);
+	overflow: auto;
+	padding: 7% 5%;
+	text-align: left;
+}
+
+input {
+	font-size: 90%;
+    width: 95%;
+    padding: 3% 1%;
+    margin-bottom: 3%;
+    border: 0.15em solid #ccc;
+    border-radius: 5px;
+}
+
+.white-background form{
+	text-align: center;
+}
+
+.white-background textarea{
+	border: 0.15em solid #ccc;
+	border-radius: 5px;
+	font-size: 90%;
+	height: 150px;
+    width: 89%;
+    padding: 2% 4%;
+}
+
+.white-login {
+	margin-top: 1rem;
+	font-size: 150%;
+	font-weight: bold;
+    background-color: #9B0000;
+    color: white;
+    padding: 1% 16%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* 閉じるボタン */
+.modal-content .close {
+	font-size: 2.5rem;
+    position: fixed;
+    cursor: pointer;
+    right: 1rem;
+    top: -3rem;
+    width: 1rem;
+    color: white;
+    z-index: 100;
+	
+}
+
+.modal-content h2{
+	text-align: center;
+	margin-bottom: 7%;
+	font-size: 118%;
+}
+
+.modal-content dt {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.modal-content dd {
+	margin: 0 0 15% 0;
+	border-bottom: 0.02rem solid #474747;
+}
+.tokusyou dd{
+	margin: 0 0 8% 0;
+}
+
+.modal-content p{
+	font-size: 90%;
+	margin: 3% 0;
+}
+
+
+.modal-content ol, .modal-content ul{
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+	padding-left: 7%;
+}

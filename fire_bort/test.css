@@ -1,0 +1,686 @@
+html{
+	font-size: min(4.25vw, 34px);
+	
+}
+
+body {
+	background-color: black;
+    margin: 0;
+    font-family: -apple-system,  /* iOS/macOS用 */
+    BlinkMacSystemFont, /* macOS用 */
+    "Segoe UI",     /* Windows用 */
+    Roboto,         /* Android用 */
+    "Helvetica Neue", /* iOS/macOSの古いバージョン用 */
+    Arial,          /* 汎用のゴシック体 */
+    sans-serif;     /* サンセリフ系フォント */
+  }
+
+header {
+  border-bottom: min(0.1rem, 3.4px) solid #797979;
+  display: block;
+  background-color: black;
+  background-image: url("img/header_bg.webp");
+  background-size: cover; 
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.scroll-to-top {
+  text-decoration: none;
+  position: fixed;;
+  display: none; /* 初期状態では非表示 */
+  z-index: 150;
+}
+
+
+/* ヘッダー内のコンテンツ */
+.header_contents {
+  display: flex; /* フレックスボックスで配置を調整 */
+  align-items: center; /* 縦方向の中央揃え */
+  justify-content: space-between; /* 各要素を左右に配置 */
+  width: 100%;
+  margin: 0 auto; /* 左右中央揃え */
+}
+
+/* ロゴのスタイル */
+.header_logo {
+  width: 11%; /* 幅を画面幅に比例させる */
+  margin: 0 1% 0 1%;
+}
+
+/* ロゴタイプのスタイル */
+.header_logotype {
+  width: 60%; /* 幅を画面幅に比例させる */
+  margin: 0 3% 0 1%;
+}
+
+/* ログインボタンのスタイル */
+.login_button {
+  margin: 2% 1% 0 0;
+  cursor: pointer;
+  width: 23.6%; /* ボタンの幅を調整 */
+}
+
+.login_button img {
+  width: 100%; /* ボタンの幅に合わせる */
+  height: auto; /* 縦横比を維持 */
+  display: block;
+}
+
+/* ボタンのスタイル */
+.line-login {
+    background-color: green;
+    color: white;
+	font-weight: 600;
+	font-size:  150%;
+    padding: 5% 8%;
+    border: none;
+    border-radius: 3% / 12%;
+    cursor: pointer;
+    margin: 3% 0;
+}
+
+.white-login {
+	font-size: 150%;
+	font-weight: bold;
+    background-color: #9B0000;
+    color: white;
+    padding: 1% 16%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 入力フォームのスタイル */
+input {
+	font-size: 90%;
+    width: 95%;
+    padding: 3% 1%;
+    margin-bottom: 3%;
+    border: 0.15em solid #ccc;
+    border-radius: 5px;
+}
+
+.login-option{
+	text-align: center;
+}
+
+.login-form{
+	margin: 8% 0;
+	text-align: center;
+}
+
+
+
+
+
+.container {
+    display: block;
+    position: relative;
+    outline: 0.03rem solid #797979;
+    top: -10%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    box-sizing: border-box;
+    transform: scale(calc(100vw / 800));
+    transform-origin: top center;
+}
+
+  .container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    max-width: 800px;
+    height: 100vh;
+    background-image: url('img/background.webp');
+    background-size: cover;
+    background-position: center bottom;
+	background-repeat: no-repeat;
+	 z-index: -1;
+  }
+
+/* 背景動画のスタイル */
+.first-view .video-background {
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    z-index: 0;
+
+    
+}
+
+.first-view {
+    position: relative;
+    overflow: visible;
+}
+
+.first-view-foot{
+    outline: 0.1rem solid #797979;
+    overflow: hidden;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40rem;  
+}
+
+.first-view-foot .video-background{
+    opacity: 0.999;
+    -webkit-backface-visibility: hidden; 
+    
+}
+
+.white-background form{
+	text-align: center;
+}
+
+.white-background textarea{
+	border: 0.15em 0 0 0 solid #ccc;
+	border-radius: 5px;
+	font-size: 90%;
+	height: 150px;
+    width: 89%;
+    padding: 2% 4%;
+}
+
+  .text-section {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-bottom: 12%;
+    overflow: visible;
+	z-index: 100;
+  }
+
+  .large-text {
+	  color: white;
+    font-size: 1.52rem; /* Scales to 52px at 800px width */
+	 margin: 0;
+	-webkit-text-stroke-width: 0.15rem;
+	-webkit-text-stroke-color: black;
+	paint-order: markers stroke fill ;
+	  font-weight: 700;
+	display: block;
+    position: relative;
+  }
+
+  .medium-text {
+	color: white;
+    font-size:  min(1rem, 34px); /* Scales to 34px at 800px width */
+	line-height: 1.8;
+	margin: 0;
+	-webkit-text-stroke-width:0.13rem;
+	-webkit-text-stroke-color: black;
+	paint-order: markers stroke fill ;
+	font-weight: 700;
+    display: block;
+    position: relative;
+  }
+
+ .small-text {
+	 color: white;
+    font-size:  min(0.76rem, 26px); /* Scales to 26px at 800px width */
+	 margin: 0;
+	-webkit-text-stroke-width: 0.1rem;
+	-webkit-text-stroke-color: black;
+	paint-order: markers stroke fill ;
+	 font-weight: 700;
+  }
+
+.gradient {
+  font-size: min(2.52rem, 86px);
+  font-weight: 900;
+  margin: 0;
+  background: linear-gradient(0deg, #d18415, #e9a900, #f5f8b4, #e9a900, #fff87f, #fff87f, #e9a900, #f5f8b4, #e9a900, #d18415);
+  background-size: 100% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: GradietionAnimation 2s linear infinite;
+}
+
+
+.inline-image {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  vertical-align: text-bottom; /* テキスト下端に揃える */
+  width: clamp(0px, calc(150 * (100vw / 800)), 150px);  /*800pxで最大150px */
+  margin: 0; /* テキストとの間隔を調整 */
+}
+
+  .header-image {
+    width: 100%;
+    height: auto;
+	pointer-events: none;
+    display: block;
+    object-fit: cover;
+	position: relative;
+    margin-bottom: -3%;
+	-webkit-touch-callout: none;
+	z-index: 50;
+  }
+
+  .overlay-section {
+    position: relative;
+    display: block;
+    margin-bottom: 12%;
+    white-space: nowrap;
+    overflow: visible;
+  }
+
+  .overlay-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+	margin: 0 auto;
+  }
+
+  .overlay-section .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	text-align: center;
+    white-space: nowrap;
+    overflow: visible;
+  }
+
+  .image-section {
+	height: auto;
+    position: relative;
+	text-align: center;
+    display: block;
+  }
+
+.image-wrapper {
+  position: relative;
+  flex: 1 1 auto;
+  max-width: 100%;
+  display: block;
+  overflow: visible;
+    
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+	position: relative;
+	margin: 0 auto;
+  }
+
+  .custom-position {
+	display: block;
+    position: absolute;
+	margin: 0 auto;
+    top: 0;
+    left: 50%;
+    width: 70%;
+    height: auto;
+    transform: translate(-50%, 0);
+	z-index: 100;
+  }
+
+
+
+.background-image {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%; /* はみ出して表示 */
+  height: 80%; /* はみ出して表示 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+
+}
+
+.text-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: block;
+}
+
+  .black-background {
+	align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+	margin: 5% 4%;
+	overflow: visible;
+	position: relative;
+  }
+
+/*画像二枚重ねセクション*/
+  .dual-image-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+	text-align: center;
+    margin-bottom:20%;;
+    overflow: visible;
+  }
+
+  .dual-image-section .background-image {
+    position: absolute;
+	left: 50%;
+	/*transform: translate(-50%, -50%);  中心配置 */
+    height: auto;
+    object-fit: cover;
+	overflow: visible;
+  }
+
+  .dual-image-section .foreground-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*transform: translate(-50%, -50%);*/
+    width: auto;
+    height: auto;
+	z-index: 10;
+  }
+
+  .dual-image-section::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: clamp(0px, calc(96 * (100vw / 800)), 96px);
+	margin-bottom: 12%;
+    visibility: hidden;
+  }
+
+footer{
+	background-color: black;
+	width: 100%;
+	height: auto;
+	text-align: left;
+	color: white;
+	margin: 0 auto;
+	padding-bottom: 20%;
+	max-width: 800px;
+	position: relative;
+	z-index: 1;
+}
+
+ul{
+	padding-left: 7%;
+}
+
+li{
+	font-weight: normal;
+	margin-bottom: 4%;
+}
+
+.footer_nav{
+	
+	display: flex;
+	justify-content: space-around; /* 均等配列 */
+	padding: 5% 0; /* 上下の余白を追加 */
+}
+
+.footer_nav a {
+	font-size: 22px;
+	color: white;
+	text-decoration: none;
+}
+.modal {
+	display: none; /* 初期は非表示 */
+	top: 0%;
+	position: absolute;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	pointer-events: auto;
+	background-color: rgba(0, 0, 0, 0.5); /* 背景の半透明化 */
+}
+
+/* モーダルコンテンツ */
+.modal-content {
+	color: black;
+	display: flex;
+	flex-direction: column;
+	transform: scale(1) translate(-50%, -50%);
+	position: fixed;
+	top: 50%;
+    left: 50%;
+	width: 95%;
+	overflow: visible;
+    height: 80%;
+	max-width: 500px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content .toiawase{
+	font-size: 0.76rem;
+    text-decoration: none;
+    color: black;
+    border: 0.01rem solid black;
+    margin: 0% 20%;
+    padding: 2% 0;
+}
+
+.white-background{
+	background-color: white;
+	border-radius: 10px;
+	font-size: min(1rem, 20px);
+	overflow: auto;
+	padding: 7% 5%;
+	text-align: left;
+}
+
+
+/* 閉じるボタン */
+.close {
+	font-size: 2.5rem;
+    position: fixed;
+    cursor: pointer;
+    right: 1rem;
+    top: -3rem;
+    width: 1rem;
+    color: white;
+    z-index: 100;
+	
+}
+
+.modal-content h2{
+	text-align: center;
+	margin-bottom: 7%;
+	font-size: 118%;
+}
+
+.modal-content dt {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.modal-content dd {
+	margin: 0 0 15% 0;
+	border-bottom: 0.02rem solid #474747;
+}
+.tokusyou dd{
+	margin: 0 0 8% 0;
+}
+
+.modal-content p{
+	font-size: 90%;
+	margin: 3% 0;
+}
+
+
+.modal-content ol, .modal-content ul{
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+	padding-left: 7%;
+}
+
+  @media (max-width: 800px){
+	  
+	.footer_nav {
+        display: flex;
+        flex-wrap: wrap; /* アイテムを折り返し */
+        justify-content: center; /* 中央揃え */
+    }
+
+    .footer_nav a {
+		font-size: min(0.76rem, 26px);
+        width: 45%; /* 各リンクの幅を45%に設定（2列表示にするため） */
+        margin: 1% -2%; /* 上下の余白を10px、左右の余白を2% */
+        text-align: center; /* リンク内テキストの中央揃え */
+    }
+}
+
+  @media (min-width: 800px) {
+    .container::before {
+      position: fixed; /* Keep the background fixed only when width >= 800px */
+    }
+	  
+  }
+
+@keyframes fadeInFromTop{
+	0% {
+		opacity: 0;
+		
+	}
+	100% {
+		opacity: 1;
+		
+	}
+	
+}
+
+.fade-in-top{
+	animation: fadeInFromTop 3s ease-out forwards;
+}
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+	
+  95%{
+	visibility: visible;
+	}
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+	visibility: visible;
+  }
+}
+
+.fade-in img {
+  animation: fadeInFromBottom 0.9s cubic-bezier(0.4, 0, 1, 1) forwards;
+  visibility: hidden;
+}
+
+@keyframes fadeInFromRight {
+  0% {
+	opacity: 0;
+    transform: translateX(60%);
+  }
+	
+  95%{
+		visibility: visible;
+	}
+	
+  100% {
+	opacity: 1;
+    transform: translateX(0%);
+	visibility: visible;
+  }
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    transform: translateX(-60%);
+  }
+  95%{
+	visibility: visible;
+  }
+
+  100% {
+    transform: translateX(0%);
+	visibility: visible;
+  }
+}
+
+.fade-in-right {
+  animation: fadeInFromRight 1s ease-out forwards;
+  animation-delay: 1.5s;
+  visibility: hidden;
+}
+
+.fade-in-left {
+  animation: fadeInFromLeft 1s ease-out forwards;
+  animation-delay: 1.5s;
+  visibility: hidden;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+	
+	50%{
+		transform: scale(1.03)
+	}
+	
+    70% {
+        transform: scale(1.07);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pluse-button{
+	animation: pulse 0.7s infinite ease-in-out;
+}
+
+@keyframes pulse2 {
+    0% {
+        transform: scale(1);
+    }
+	
+	30%{
+		transform:  scale(0.8)
+	}
+	
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pluse2-button{
+	animation: pulse2 1.5s infinite ease-in-out;
+}
+
+@keyframes GradietionAnimation { 
+  from { background-position: 0% 50%; }
+  to { background-position: 0% 300%; }
+}
+
