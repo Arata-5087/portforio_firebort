@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>ファイヤーボート</title>
+<link rel="icon" type="image/png" href="../img/header_logo.webp">
+<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="index.js"></script>
+</head>
+<body class="kaime_korogasi">
+	<div class="container">
+		<header>
+			<div class="header_contents">
+            <div class="menu-icon" onClick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+			</div>
+				<a href="index.html">
+					<img class="header_logo" src="../img/header_logo.webp" alt="logo">
+					<img class="header_logotype" src="../img/header_logotype.webp" alt="logotype">
+				</a>
+			</div>
+		</header>
+		<nav id="mainMenu" class="menu">
+			<div class="close">&times;</div>
+			<p class="medium-text">会員ID：lasid</p>
+			<p class="medium-text">保有PT：200PT</p>
+			<ul>
+    	    	<li><img src="../img/menu_point.svg" alt="a"><a class="small-text" href="siharai.html">ポイント追加</a></li>
+    	    	<li><img src="../img/menu_home.svg" alt="a"><a class="small-text" href="index.html">メインプラン</a></li>
+    	    	<li><img src="../img/menu_mato.svg" alt="a"><a class="small-text" href="jisseki.html">的中実績</a></li>
+    	    	<li><img src="../img/menu_mail.svg" alt="a"><a class="small-text" href="mail_box.html">メールボックス</a></li>
+    	    	<li><img src="../img/menu_korogasi.svg" alt="a"><a class="small-text" href="how_to_korogasi.html">コロガシとは？</a></li>
+    	    	<li><img src="../img/menu_tele.svg" alt="a"><a class="small-text" href="how_to_register.html">テレボート登録方法</a></li>
+    	    	<li><img src="../img/menu_hikouki.svg" alt="a"><a class="small-text" href="contact.html">お問い合わせ</a></li>
+    	    	<li><img src="../img/menu_line.svg" alt="a"><a class="small-text" href="#">ラインに戻る</a></li>
+			</ul>
+    	</nav>
+		<div class="member-info">
+			<p class="medium-text">会員ID:asdfw <span style="margin:0 0 0 4%">保有PT:200PT</span></p>
+		</div>
+	<section class="image-section">
+		<img class="foreground-image" id="image" src="../img/99_1_bn_special.webp" alt="special">
+	</section>
+	<div class="black-background">
+		<table>
+			<tr><td colspan="2">1レース目</td></tr>
+			<tr><th>日付</th><td id="date1">11月11日</td></tr>
+			<tr><th>レース</th><td id="race1">蒲郡2R</td></tr>
+			<tr><th>買い目</th><td id="buy_it1">1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)</td></tr>
+			<tr><th>推奨金額</th><td id="amount1">10,000円の推奨金額を、<br><span>各買い目の％に振り分けてご購入ください。</span></td></tr>
+		</table>
+	</div>
+	<div class="black-background">
+		<table>
+			<tr><td colspan="2">2レース目</td></tr>
+			<tr><th>日付</th><td id="date2">11月11日</td></tr>
+			<tr><th>レース</th><td id="race2">蒲郡2R</td></tr>
+			<tr><th>買い目</th><td id="buy_it2">1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)<br>1-2-3 (20%)</td></tr>
+			<tr><th>推奨金額</th><td id="amount2"><span>1R目の配当を％振り分け</span><br><span>1R目が不的中となった場合には10,000円を上限とし、</span><br><span>各買い目に振り分けての購入をよろしくお願い致します。</span><br></td></tr>
+		</table>
+	</div>
+	<div>
+		<nav class="floating-menu">
+			<a href="index.html">
+			 	<div class="menu-item">
+			 		<img loading="lazy" src="../img/menu_home.svg" alt="メインプラン">
+			 		<div class="menu-text">メインプラン</div>
+			 	</div>
+			</a>
+			<a href="siharai.html">
+			    <div class="menu-item">
+			        <img loading="lazy" src="../img/menu_point.svg" alt="ポイント追加">
+			        <div class="menu-text">ポイント追加</div>
+			    </div>
+			</a>
+			<a href="jisseki.html">
+			    <div class="menu-item">
+			        <img loading="lazy" src="../img/menu_mato.svg" alt="的中実績">
+			        <div class="menu-text">的中実績</div>
+			    </div>
+			</a>
+			<a href="mail_box.html">
+			    <div class="menu-item">
+			        <img loading="lazy" src="../img/menu_mail.svg" alt="メールボックス" >
+			        <div class="menu-text">メールボックス</div>
+			    </div>
+			</a>			
+			<a href="contact.html">
+			    <div class="menu-item">
+			        <img loading="lazy" src="../img/menu_hikouki.svg" alt="お問合せ">
+			        <div class="menu-text">お問合せ</div>
+			    </div>
+			</a>			
+			<a href="#">
+			    <div class="menu-item">
+			        <img loading="lazy" src="../img/menu_line.svg" alt="ラインに戻る">
+			        <div class="menu-text">ラインに戻る</div>
+			    </div>
+			</a>
+    </nav>
+	</div>
+	<footer>
+	<nav class="footer_nav">
+		<a href="terms.html">ご利用規約</a>
+		<a href="tokusyouhou.html">特商法</a>
+		<a href="privacy.html">プライバシーポリシー</a>
+		<a href="javascript:void(0)" onclick="toggleModal('inquiryModal')">お問合せ</a>
+	</nav>
+	<ul class="small-text">
+		<li>モーターボート競走法により、20歳未満が舟券を購入し、または譲り受けることは禁止されております。また、20歳未満は当サイト登録はできません。</li>
+		<li>勝舟投票券の購入は個人の責任において行ってください。当サイトでは舟券投票代行は行っておりません。</li>
+		<li>競艇を行うにあたり、入手した情報を厳選・精査の上ご案内をさせて頂いてはおりますが、提供されます情報は競艇という競技の性質上、100%の的中を保証するものではございません。</li>
+		<li>当社の情報利用により生じたいかなる損害について、一切の責任は負いかねますのでご了承下さい。</li>
+	</ul>
+	<section class="text-section" style="margin-bottom: 0;">
+	 <p class="small-text" style="padding: 5% 0">©　ファイヤーボート All rights reserved.</p>
+	</section>
+	</footer>
+	<div id="inquiryModal" class="modal">
+	<div class="modal-content"><span class="close" onclick="toggleModal('inquiryModal')">&times;</span>
+	<div class="white-background" style="height: auto;">
+		<h2>お問合せ</h2>
+		<p>ご登録、ご利用に関するご質問はお気軽にお問い合わせください。</p>
+		<form method="post" action="#" name="#">
+			<textarea type="text" id="mesage" class="#" placeholder="お問い合わせ内容"></textarea>
+			<button class="white-login">問い合せ</button>
+			<button class="white-login">LINEで問い合せ</button>
+			<dl>
+				<dt>電話番号</dt><dd　style="border-bottom:none"><p>00-0000-0000</p></dd>
+			</dl>
+		</form>
+	</div></div>
+</div>
+	</div>
+</body>
+</html> 
