@@ -259,7 +259,7 @@ input {
 }
 
 .gradient {
-  font-size: min(2.52rem, 86px);
+  font-size: min(2rem, 86px);
   font-weight: 900;
   margin: 0;
   background: linear-gradient(0deg, #d18415, #e9a900, #f5f8b4, #e9a900, #fff87f, #fff87f, #e9a900, #f5f8b4, #e9a900, #d18415);
