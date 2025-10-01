@@ -348,7 +348,7 @@ input {
     height: auto;
     display: block;
     position: relative;
-
+    margin: 0 auto;
 }
 
   .custom-position {

@@ -8,8 +8,8 @@
 <title>ファイヤーボート</title>
 <link rel="icon" type="image/png" href="../img/header_logo.webp">
 <link rel="stylesheet" type="text/css" href="index.css">
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="index.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="index.js"></script>
 </head>
 <body class="kaime_korogasi">
 	<div class="container">
@@ -34,9 +34,9 @@
     	    	<li><img src="../img/menu_point.svg" alt="a"><a class="small-text" href="siharai.html">ポイント追加</a></li>
     	    	<li><img src="../img/menu_home.svg" alt="a"><a class="small-text" href="index.html">メインプラン</a></li>
     	    	<li><img src="../img/menu_mato.svg" alt="a"><a class="small-text" href="jisseki.html">的中実績</a></li>
-    	    	<li><img src="../img/menu_mail.svg" alt="a"><a class="small-text" href="mail/mail_box.html">メールボックス</a></li>
-    	    	<li><img src="../img/menu_korogasi.svg" alt="a"><a class="small-text" href="how_to/korogasi.html?source=korogasi">コロガシとは？</a></li>
-    	    	<li><img src="../img/menu_tele.svg" alt="a"><a class="small-text" href="how_to/register.html?source=register">テレボート登録方法</a></li>
+    	    	<li><img src="../img/menu_mail.svg" alt="a"><a class="small-text" href="mail_box.html">メールボックス</a></li>
+			<li><img src="../img/menu_korogasi.svg" alt="a"><a class="small-text" href="how_to_korogasi.html">コロガシとは？</a></li>
+			<li><img src="../img/menu_tele.svg" alt="a"><a class="small-text" href="how_to_register.html">テレボート登録方法</a></li>
     	    	<li><img src="../img/menu_hikouki.svg" alt="a"><a class="small-text" href="contact.html">お問い合わせ</a></li>
     	    	<li><img src="../img/menu_line.svg" alt="a"><a class="small-text" href="#">ラインに戻る</a></li>
 			</ul>
@@ -45,7 +45,7 @@
 			<p class="medium-text">会員ID:asdfw <span style="margin:0 0 0 4%">保有PT:200PT</span></p>
 		</div>
 	<section class="image-section">
-		<img class="foreground-image" id="image" src="../img/16_1_bn_hit.webp" alt="hit">
+		<img class="foreground-image" id="image" src="../img/3_1_bn_best.webp" alt="fifth_d">
 	</section>
 	<div class="black-background">
 		<table>
@@ -85,18 +85,18 @@
 			        <div class="menu-text">的中実績</div>
 			    </div>
 			</a>
-			<a href="mail/mail_box.html">
+			<a href="mail_box.html">
 			    <div class="menu-item">
 			        <img loading="lazy" src="../img/menu_mail.svg" alt="メールボックス" >
 			        <div class="menu-text">メールボックス</div>
 			    </div>
-			</a>
+			</a>			
 			<a href="contact.html">
 			    <div class="menu-item">
 			        <img loading="lazy" src="../img/menu_hikouki.svg" alt="お問合せ">
 			        <div class="menu-text">お問合せ</div>
 			    </div>
-			</a>
+			</a>			
 			<a href="#">
 			    <div class="menu-item">
 			        <img loading="lazy" src="../img/menu_line.svg" alt="ラインに戻る">
@@ -123,20 +123,20 @@
 	</section>
 	</footer>
 	<div id="inquiryModal" class="modal">
-		<div class="modal-content"><span class="close" onclick="toggleModal('inquiryModal')">&times;</span>
-		<div class="white-background" style="height: auto;">
-			<h2>お問合せ</h2>
-			<p>ご登録、ご利用に関するご質問はお気軽にお問い合わせください。</p>
-			<form method="post" action="#" name="#">
-				<input type="text" id="email" class="#" name="mail" placeholder="メールアドレス">
-				<textarea type="text" id="mesage" class="#" placeholder="お問い合わせ内容"></textarea>
-				<button class="white-login">問い合せ</button>
-				<dl>
-					<dt>電話番号</dt><dd style="border-bottom:none"><p>00-0000-0000</p></dd>
-				</dl>
-			</form>
-		</div></div>
-	</div>
+	<div class="modal-content"><span class="close" onclick="toggleModal('inquiryModal')">&times;</span>
+	<div class="white-background" style="height: auto;">
+		<h2>お問合せ</h2>
+		<p>ご登録、ご利用に関するご質問はお気軽にお問い合わせください。</p>
+		<form method="post" action="#" name="#">
+			<input type="text" id="email" class="#" name="mail" placeholder="メールアドレス">
+			<textarea type="text" id="mesage" class="#" placeholder="お問い合わせ内容"></textarea>
+			<button class="white-login">問い合せ</button>
+			<dl>
+				<dt>電話番号</dt><dd style="border-bottom:none"><p>00-0000-0000</p></dd>
+			</dl>
+		</form>
+	</div></div>
+</div>
 	</div>
 </body>
 </html> 
